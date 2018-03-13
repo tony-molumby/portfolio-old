@@ -1,0 +1,1 @@
+This is currently a work in progress for my portfolio site.  I would like to learn more about SVGs and animation, so that is the focus of this ReactJS website.

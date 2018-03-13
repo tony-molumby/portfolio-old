@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(12, auto);
+  grid-template-areas: "header" "title" "subtitle" "banner" "project-title" "projects" "bio" "skills-title" "skills-graph" "contact" "social" "footer"; }
+
+#header {
+  max-height: 8em;
+  grid-area: header; }
+
+#title {
+  grid-area: title; }
+
+#subtitle {
+  grid-area: subtitle; }
+
+#banner {
+  grid-area: banner; }
+
+#project-title {
+  grid-area: project-title; }
+
+#projects {
+  grid-area: projects; }
+
+#bio {
+  grid-area: bio; }
+
+#skills-title {
+  grid-area: skills-title; }
+
+#skills-graph {
+  grid-area: skills-graph; }
+
+#contact {
+  grid-area: contact; }
+
+#social {
+  grid-area: social; }
+
+#footer {
+  grid-area: footer; }
+
+hr {
+  border-color: #F6A829;
+  background-color: #F6A829; }
