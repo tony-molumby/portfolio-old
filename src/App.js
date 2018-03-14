@@ -17,6 +17,28 @@ import Footer from './components/footer';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        windowWidth: window.innerWidth
+    };
+  }
+
+    handleResize = (e) => {
+      this.setState({
+          windowWidth: window.innerWidth
+      });
+    }
+
+    componentDidMount() {
+      window.addEventListener('resize', this.handleResize)
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.handleResize)
+    }
+
   render() {
 
     return (
@@ -24,7 +46,7 @@ class App extends Component {
         <Header id="header" />
         <Title id="title" />
         <Subtitle id="subtitle"/>
-        <Banner id="banner" />
+        <Banner id="banner" windowWidth={this.state.windowWidth} />
         <ProjectTitle id="project-title" />
         <Projects id="projects"/>
         <Bio />

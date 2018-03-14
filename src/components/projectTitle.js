@@ -5,7 +5,7 @@ class ProjectTitle extends Component {
         return(
             <div>
                 <h2>PROJECTS</h2>
-                <hr />
+                <div className="hr"></div>
             </div>
         )
     }

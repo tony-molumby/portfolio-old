@@ -1,4 +1,11 @@
 import React, {Component} from 'react';
+import ProjectCard from './projectCard';
+
+//pictures
+import find12steps from '../pictures/find12steps.png';
+import gameoflife from '../pictures/gameoflife.png';
+import leaderboard from '../pictures/leaderboard.png';
+import memory from '../pictures/memory.png';
 
 class Projects extends Component {
     constructor(props){
@@ -14,7 +21,7 @@ class Projects extends Component {
                         meetings in San Francisco Bay Area, and 
                         allows users to search for meetings near them.
                     `,
-                    img: '../pictures/find12steps.png'
+                    img: find12steps
                 },
                 {
                     name: 'Game of Life',
@@ -23,7 +30,7 @@ class Projects extends Component {
                     description: `
                         The game of life info from github.
                     `,
-                    img: ''
+                    img: gameoflife
                 },
                 {
                     name: 'JQuery Memory Game',
@@ -32,7 +39,7 @@ class Projects extends Component {
                     description: `
                     Memory info from github.
                 `,
-                img: ''
+                img: memory
                 },
                 {
                     name: 'FCC LeaderBoard',
@@ -41,25 +48,24 @@ class Projects extends Component {
                     description: `
                     FCC Info from github.
                 `,
-                    img: ''
+                    img: leaderboard
                 }
             ]
         }
     }
 
-    createDisplay = (project) => {
+    createDisplay = (project, i) => {
         return (
-            <div>
-                <img src={project.img} />
-                <h4>{project.description}</h4>
-            </div>
+            <ProjectCard img={project.img} url={project.url} key={"project" + i} id={"project" + i} />
         )
     }
 
     render(){
+        let {projects} = this.state;
+        let cards = projects.map(this.createDisplay);
         return(
             <div>
-            {/* PlaceHolder */}
+                {cards}
             </div>
         )
     }

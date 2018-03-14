@@ -5,7 +5,7 @@ class Title extends Component {
         return(
             <div>
                 <h1 className="title">HI, I'M TONY</h1>
-                <hr />
+                <div className="hr"></div>
             </div>
         )
     }

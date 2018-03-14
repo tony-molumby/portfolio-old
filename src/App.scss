@@ -8,7 +8,7 @@ $darkGray: #AEAEAE;
 //------sections----------//
 
 .App {
-  width: 100%;
+ 
   text-align: center;
   font-family: 'Raleway', sans-serif;
   display: grid;
@@ -51,7 +51,15 @@ $darkGray: #AEAEAE;
 }
 
 #projects {
-   grid-area: projects
+   grid-area: projects;
+   display: grid;
+   justify-items: center;
+   grid-template-rows: repeat(4, 1fr);
+   grid-template-areas:
+    "project0"
+    "project1"
+    "project2"
+    "project3"
 }
 
 #bio {
@@ -78,11 +86,42 @@ $darkGray: #AEAEAE;
   grid-area: footer;
 }
 
+//---Sub grid items---//
+#project0{
+  grid-area: project0;
+  
+}
+
+#project1{
+  grid-area: project1;
+}
+
+#project2{
+  grid-area: project2;
+}
+
+#project3{
+  grid-area: project3;
+}
+
 //---Other Styling ---//
-hr {
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hr {
   border-color: #F6A829;
   background-color: #F6A829;
+  height: 0.5em;
 }
+
+.project-card {
+  display: inline-block;
+  max-width: 20em;
+  margin: 1em;
+}
+
 //----Media Queries ---//
 
 @media screen and (min-width: 768px){

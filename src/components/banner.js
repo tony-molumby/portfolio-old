@@ -3,40 +3,22 @@ import Diamond from './diamond';
 
 class Banner extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            windowWidth: window.innerWidth
-        };
-    }
-
-    handleResize = (e) => {
-        this.setState({
-            windowWidth: window.innerWidth
-        });
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.handleResize)
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize)
-    }
-
     createRow = (x, y, dWidth, dHeight, fill) => {
-        let {windowWidth} = this.state;
+        let {windowWidth} = this.props;
         let numDiamonds = Math.ceil((windowWidth - x) / dWidth);
         let display = [];
-        
+        let zeroStart = false;
+        if(x === 0) zeroStart = true;
+
         for (let i = 0; i < numDiamonds; i++){
             let center = [];
             if(i === 0){
                 center = [x, y];
-            } else if(x === 0 && i === 1) {
+            } else if (zeroStart && i === 1) {
                 x = dWidth;
                 center = [x, y];
+            } else if (zeroStart && i > 1){
+                center = [dWidth * i, y];
             } else {
                 center = [x + dWidth * i, y];
             }
