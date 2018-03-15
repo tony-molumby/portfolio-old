@@ -9,8 +9,8 @@ class ProjectCard extends Component {
         }
     }
 
-    handleClick = (e) => {
-        window.open(this.props.url, '_blank');
+    handleClick = (e, {name}) => {
+        window.open(this.props[name], '_blank');
     }
 
     handleMouseEnter = (e) => {
@@ -30,10 +30,11 @@ class ProjectCard extends Component {
         let githubBtn = (
             <Popup
             trigger={
-                <Button name="github" 
-                onClick={this.handleClick} 
-                icon="github square"
-                size="big"
+                <Button 
+                    name="github" 
+                    onClick={this.handleClick} 
+                    icon="github square"
+                    size="big"
                 />
             }
             content="View code on github"
@@ -48,7 +49,15 @@ class ProjectCard extends Component {
                 <Header as="h2" inverted>{this.props.name} </Header>
                 {githubBtn}
                 <Popup
-                    trigger={<Button name="url" icon="external" size="big"/>}
+                    trigger={
+                        <Button 
+                            name="url" 
+                            icon="external" 
+                            size="big"
+                            onClick={this.handleClick}
+                            className="button"
+                        />
+                    }
                     content="View on the web"
                 />
             </div>
@@ -62,6 +71,7 @@ class ProjectCard extends Component {
                     onMouseLeave={this.handleMouseLeave}
                     size='medium'
                     src={this.props.img}
+                    className="project-card"
                 />
         )
     }

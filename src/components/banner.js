@@ -40,7 +40,7 @@ class Banner extends Component {
         let row2 = this.createRow((width/2), height + 1, width, height, darkGray);
 
         return(
-            <div id={this.props.id}>
+            <div id={this.props.id} className={this.props.className}>
                 <svg height={height * 1.5} width="100%" >
                     {row1}
                     {row2}

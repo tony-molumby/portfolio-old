@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class ProjectTitle extends Component {
     render(){
         return(
-            <div>
+            <div className={this.props.className}>
                 <h2>PROJECTS</h2>
                 <div className="hr"></div>
             </div>
