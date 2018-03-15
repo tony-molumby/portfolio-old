@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ProjectCard from './projectCard';
 
-//pictures
+//images
 import find12steps from '../pictures/find12steps.png';
 import gameoflife from '../pictures/gameoflife.png';
 import leaderboard from '../pictures/leaderboard.png';
@@ -15,38 +15,38 @@ class Projects extends Component {
                 {
                     name: "find12steps.com",
                     url: "http://www.find12steps.com",
-                    github: 'http://www.github.com/tony-molumby/',
                     description: `
                         A website which aggregates 12-step program
-                        meetings in San Francisco Bay Area, and 
-                        allows users to search for meetings near them.
+                        meetings in San Francisco Bay Area.
                     `,
                     img: find12steps
                 },
                 {
                     name: 'Game of Life',
-                    url: 'http://codepen.io/',
-                    github: 'http://www.github.com/tony-molumby/',
+                    url: 'https://codepen.io/InfiniteSet/full/xXGvbx',
+                    github: 'https://github.com/tony-molumby/Game-of-Life',
                     description: `
-                        The game of life info from github.
+                    A cellular automaton devised by the British 
+                    mathematician John Horton Conway in 1970. 
                     `,
                     img: gameoflife
                 },
                 {
                     name: 'JQuery Memory Game',
-                    url: 'http://www.codepen.io/',
-                    github: 'http://www.github.com/tony-molumby/',
+                    url: 'https://codepen.io/InfiniteSet/full/EmMjZR',
+                    github: 'https://github.com/tony-molumby/Jquery-Memory-Game',
                     description: `
-                    Memory info from github.
-                `,
-                img: memory
+                    A JQuery version of the simon memory game we all
+                    played when we were kids. 
+                    `,
+                    img: memory
                 },
                 {
                     name: 'FCC LeaderBoard',
-                    url: 'http://www.codepen.io/',
-                    github: 'http://www.github.com/tony-molumby/',
+                    url: 'https://codepen.io/InfiniteSet/full/YxBLvr/',
+                    github: 'https://github.com/tony-molumby/FCC-LeaderBoard',
                     description: `
-                    FCC Info from github.
+                    Leaderboard of FCC users based on points. 
                 `,
                     img: leaderboard
                 }
@@ -56,7 +56,15 @@ class Projects extends Component {
 
     createDisplay = (project, i) => {
         return (
-            <ProjectCard img={project.img} url={project.url} key={"project" + i} id={"project" + i} />
+            <ProjectCard
+                name={project.name}
+                url={project.url}
+                github={project.github}
+                description={project.description} 
+                img={project.img} 
+                key={"project" + i} 
+                id={"project" + i} 
+                />
         )
     }
 

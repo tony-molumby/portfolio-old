@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "gsap": "^1.20.4",
+    "gulp": "^3.9.1",
     "node-sass-chokidar": "^1.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-gsap-enhancer": "^0.3.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "semantic-ui-css": "^2.3.0",
+    "semantic-ui-react": "^0.78.3"
   },
   "scripts": {
     "start": "react-scripts start",
