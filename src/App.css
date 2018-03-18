@@ -32,7 +32,11 @@
 
 #bio {
   grid-area: bio;
-  width: 100%; }
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "bio-pic" "bio-title" "bio-text"; }
 
 #skills-title {
   grid-area: skills-title; }
@@ -73,11 +77,27 @@
 #bio-text {
   grid-area: bio-text; }
 
+.card-header {
+  color: #AEAEAE; }
+
+.card-content {
+  align-items: center; }
+
+#bio-pic {
+  margin-bottom: 0.5em; }
+
 .hr {
   border-color: #F6A829;
   background-color: #F6A829;
   height: 0.5em;
   margin-bottom: 1em; }
+
+.hr-inverted {
+  border-color: #AEAEAE;
+  background-color: #AEAEAE;
+  height: 0.5em;
+  align-self: center;
+  margin: 0em 0em 0em 0em; }
 
 .project-card {
   display: inline-block;
@@ -93,7 +113,8 @@
   padding-top: 2em; }
 
 .orange {
-  background-color: #F6A829; }
+  background-color: #F6A829;
+  padding: 2em; }
 
 .dark-gray {
   background-color: #AEAEAE; }

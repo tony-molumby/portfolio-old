@@ -9,7 +9,6 @@ $orange: #F6A829;
 //------sections----------//
 
 .App {
- 
   text-align: center;
   font-family: 'Raleway', sans-serif;
   display: grid;
@@ -66,7 +65,14 @@ $orange: #F6A829;
 
 #bio {
   grid-area: bio;
-   width: 100%;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+  "bio-pic"
+  "bio-title"
+  "bio-text"
 }
 
 #skills-title {
@@ -125,13 +131,31 @@ $orange: #F6A829;
 
 //---Other Styling ---//
 
+.card-header {
+  color: $darkGray;
+}
 
+.card-content {
+  align-items: center;
+}
+
+#bio-pic {
+  margin-bottom: 0.5em;
+}
 
 .hr {
   border-color: $orange;
   background-color: $orange;
   height: 0.5em;
   margin-bottom: 1em;
+}
+
+.hr-inverted {
+  border-color: $darkGray;
+  background-color: $darkGray;
+  height: 0.5em;
+  align-self: center;
+  margin: 0em 0em 0em 0em;
 }
 
 .project-card {
@@ -152,6 +176,7 @@ $orange: #F6A829;
 
 .orange {
   background-color: $orange;
+  padding: 2em;
 }
 
 .dark-gray {

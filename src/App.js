@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-//CSS
-import './App.css';
-import './semantic/dist/semantic.min.css'
-
 //Custom Components//
 import Header from './components/header';
 import Title from './components/title';
@@ -46,15 +42,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header id="header" />
+        <Header id="header" windowWidth={this.state.windowWidth} />
         <Title id="title" className="separator" />
         <Subtitle id="subtitle"/>
         <Banner id="banner" windowWidth={this.state.windowWidth} className="separator" />
         <ProjectTitle id="project-title" className="separator" />
         <Projects id="projects"/>
         <Bio id="bio" className="separator" />
-        <SkillsTitle />
-        <SkillsGraph />
+        <SkillsTitle id="skills-title" className="separator"/>
+        <SkillsGraph id="skills-graph" className="" />
         <Contact />
         <Social />
         <Footer />

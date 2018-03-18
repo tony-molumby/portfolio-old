@@ -45,8 +45,8 @@ class ProjectCard extends Component {
         }
 
         const content = (
-            <div>
-                <Header as="h2" inverted>{this.props.name} </Header>
+            <div className="card-content">
+                <Header as="h2" color="grey">{this.props.name} </Header>
                 {githubBtn}
                 <Popup
                     trigger={
