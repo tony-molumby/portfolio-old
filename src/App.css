@@ -38,6 +38,13 @@
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "bio-pic" "bio-title" "bio-text"; }
 
+#skills {
+  grid-area: skills;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "skills-title" "skills-text" "skills-graph"; }
+
 #skills-title {
   grid-area: skills-title; }
 
@@ -45,7 +52,12 @@
   grid-area: skills-graph; }
 
 #contact {
-  grid-area: contact; }
+  grid-area: contact;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "contact-title" "contact-form"; }
 
 #social {
   grid-area: social; }
@@ -77,6 +89,15 @@
 #bio-text {
   grid-area: bio-text; }
 
+#skills-title {
+  grid-area: skills-title; }
+
+#skills-text {
+  grid-area: skills-text; }
+
+#skills-graph {
+  grid-area: skills-graph; }
+
 #graph-labels {
   grid-area: graph-labels; }
 
@@ -86,6 +107,9 @@
 .card-content {
   align-items: center; }
 
+.contain {
+  padding: 2em; }
+
 #bio-pic {
   margin-bottom: 0.5em; }
 
@@ -93,14 +117,14 @@
   border-color: #F6A829;
   background-color: #F6A829;
   height: 0.5em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  align-self: center; }
 
 .hr-inverted {
   border-color: #AEAEAE;
   background-color: #AEAEAE;
   height: 0.5em;
-  align-self: center;
-  margin: 0em 0em 0em 0em; }
+  align-self: center; }
 
 .hidden {
   visibility: hidden; }
@@ -121,7 +145,6 @@
 
 .project-card {
   display: inline-block;
-  max-width: 20em;
   margin: 1em;
   cursor: pointer; }
 
@@ -130,8 +153,7 @@
   padding-top: 2em; }
 
 .orange {
-  background-color: #F6A829;
-  padding: 2em; }
+  background-color: #F6A829; }
 
 .dark-gray {
   background-color: #AEAEAE; }

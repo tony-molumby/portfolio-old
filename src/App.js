@@ -8,8 +8,7 @@ import Banner from './components/banner';
 import ProjectTitle from './components/projectTitle';
 import Projects from './components/projects';
 import Bio from './components/bio';
-import SkillsTitle from './components/skillsTitle';
-import SkillsGraph from './components/skillsGraph';
+import Skills from './components/skills';
 import Contact from './components/contact';
 import Social from './components/social';
 import Footer from './components/footer';
@@ -49,9 +48,8 @@ class App extends Component {
         <ProjectTitle id="project-title" className="separator" />
         <Projects id="projects"/>
         <Bio id="bio" className="separator" />
-        <SkillsTitle id="skills-title" className="separator"/>
-        <SkillsGraph id="skills-graph" className="" />
-        <Contact />
+        <Skills id="skills" className="separator" />
+        <Contact id="contact" className="" />
         <Social />
         <Footer />
       </div>
