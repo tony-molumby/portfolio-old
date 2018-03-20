@@ -77,6 +77,9 @@
 #bio-text {
   grid-area: bio-text; }
 
+#graph-labels {
+  grid-area: graph-labels; }
+
 .card-header {
   color: #AEAEAE; }
 
@@ -104,11 +107,17 @@
 
 .line {
   stroke: #D7D7D7;
-  stroke-width: 3px; }
+  stroke-width: 2px; }
 
-.rect {
+.graph-bar {
   fill: #F6A829;
   stroke: #5E5E5E; }
+
+.graph-background {
+  fill: #AEAEAE; }
+
+.graph-labels {
+  transform: rotate(-10deg); }
 
 .project-card {
   display: inline-block;

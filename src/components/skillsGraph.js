@@ -1,7 +1,24 @@
 import React, {Component} from 'react';
-import {Container} from 'semantic-ui-react';
+import {Container, Header} from 'semantic-ui-react';
 
 class SkillsGraph extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            fromTop: [ 35, 70, 35, 35, 50, 70],
+            labels: [
+                "HTML", 
+                "CSS", 
+                "Javascript", 
+                "ReactJS", 
+                "NodeJS", 
+                "MongoDB"
+            ],
+            letterNudge: [4, 6, 0, 2, 2, 0]
+               
+        }
+    }
 
     displayLines = () => {
         let x1 = 10;
@@ -20,39 +37,60 @@ class SkillsGraph extends Component {
     }
 
     displayRects = (width, height) => {
-        let fromTop = [ 35, 70, 35, 35, 50, 70];
+        let {fromTop} = this.state;
         let rects = [];
         let x = 10;
-        fromTop.forEach((item, i) => {
-            
+        fromTop.forEach((item) => {
             rects.push(
                 <rect 
                     x={x} 
                     y={item} 
                     width={width}
-                    height={height - item - 17} 
-                    className="rect"
+                    height={height - item - 16} 
+                    className="graph-bar"
                 />
             )
-            x += (26 + width);
+            x += 26 + width;
         })
         return rects;
     }
 
+    displayLabels = (width) => {
+        let {labels, letterNudge} = this.state;
+        let jsxLabels = [];
+        let x= 23;
+                
+        labels.forEach((item, i) => {
+            let y = 270;
+            y -= letterNudge[i] * 6;
+            jsxLabels.push(
+                <text
+                    x={x}
+                    y={y}
+                    transform={"rotate(270," + x + "," + y + ")"}
+                >
+                {item}
+                </text>
+            )
+            x += 27 + width;
+        })
+        return jsxLabels;
+    }
+
     render(){
-        let lightGray = "#D7D7D7";
-        let darkGray = "#AEAEAE";
-        let orange = "#F6A829";
-        let veryDarkGray = "#5E5E5E"
+        let width = 25;
         let lines = this.displayLines();
-        let rects = this.displayRects(25, 200);
+        let rects = this.displayRects(width, 200);
+        let labels = this.displayLabels(width);
         return(
-            <Container>
-                <svg viewBox="0 0 300 200">
-                    <rect width="300" height="200" fill={darkGray}/>
+            <Container id={this.props.id} className={this.props.className}>
+                <svg viewBox="0 0 300 300">
+                    <rect width="300" height="200" className="graph-background"/>
                     {lines}
                     {rects}
-                </svg>
+                    {labels}
+                </svg>      
+               
             </Container>
         )
     }

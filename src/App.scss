@@ -130,6 +130,9 @@ $orange: #F6A829;
   grid-area: bio-text;
 }
 
+#graph-labels {
+  grid-area: graph-labels;
+}
 //---Other Styling ---//
 
 .card-header {
@@ -165,12 +168,21 @@ $orange: #F6A829;
 
 .line {
   stroke: $lightGray;
-  stroke-width: 3px;
+  stroke-width: 2px;
 }
 
-.rect {
+.graph-bar{
   fill: $orange;
   stroke: $veryDarkGray;
+}
+
+.graph-background {
+  fill: $darkGray;
+}
+
+.graph-labels {
+  transform: 
+    rotate(-10deg);
 }
 
 
