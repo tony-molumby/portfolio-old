@@ -99,14 +99,22 @@
   align-self: center;
   margin: 0em 0em 0em 0em; }
 
+.hidden {
+  visibility: hidden; }
+
+.line {
+  stroke: #D7D7D7;
+  stroke-width: 3px; }
+
+.rect {
+  fill: #F6A829;
+  stroke: #5E5E5E; }
+
 .project-card {
   display: inline-block;
   max-width: 20em;
   margin: 1em;
   cursor: pointer; }
-
-.hidden {
-  visibility: hidden; }
 
 .separator {
   margin-top: 1em;

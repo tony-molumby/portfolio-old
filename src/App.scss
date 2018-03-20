@@ -1,6 +1,7 @@
 //------colors --------//
 $lightGray: #D7D7D7;
 $darkGray: #AEAEAE;
+$veryDarkGray: #5E5E5E;
 $orange: #F6A829;
 
 //-----Animations------//
@@ -158,6 +159,21 @@ $orange: #F6A829;
   margin: 0em 0em 0em 0em;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.line {
+  stroke: $lightGray;
+  stroke-width: 3px;
+}
+
+.rect {
+  fill: $orange;
+  stroke: $veryDarkGray;
+}
+
+
 .project-card {
   display: inline-block;
   max-width: 20em;
@@ -165,9 +181,7 @@ $orange: #F6A829;
   cursor: pointer;
 }
 
-.hidden {
-  visibility: hidden;
-}
+
 
 .separator{
   margin-top: 1em;
@@ -186,6 +200,7 @@ $orange: #F6A829;
 .light-gray {
   background-color: $lightGray;
 }
+
 
 //----Media Queries ---//
 
