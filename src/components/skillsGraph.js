@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {Container, Header} from 'semantic-ui-react';
-
 class SkillsGraph extends Component {
 
     constructor(props) {
@@ -28,7 +26,7 @@ class SkillsGraph extends Component {
         let lines = []
         for(let i = 0; i < 6; i++){
             lines.push(
-                <line x1={x1} y1={y1} x2={x2} y2={y2} className="line" />
+                <line x1={x1} y1={y1} x2={x2} y2={y2} key={"line-" + i} className="line" />
             )
             y1 += 35;
             y2 += 35;
@@ -40,13 +38,14 @@ class SkillsGraph extends Component {
         let {fromTop} = this.state;
         let rects = [];
         let x = 10;
-        fromTop.forEach((item) => {
+        fromTop.forEach((item, i) => {
             rects.push(
                 <rect 
                     x={x} 
                     y={item} 
                     width={width}
-                    height={height - item - 16} 
+                    height={height - item - 16}
+                    key={"rect-" + i} 
                     className="graph-bar"
                 />
             )
@@ -67,6 +66,7 @@ class SkillsGraph extends Component {
                 <text
                     x={x}
                     y={y}
+                    key={"label-" + i}
                     transform={"rotate(270," + x + "," + y + ")"}
                 >
                 {item}

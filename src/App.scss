@@ -1,3 +1,6 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
 //------colors --------//
 $lightGray: #D7D7D7;
 $darkGray: #AEAEAE;
@@ -11,7 +14,6 @@ $orange: #F6A829;
 
 .App {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(12, auto);
@@ -117,7 +119,6 @@ $orange: #F6A829;
 //---Sub grid items---//
 #project0{
   grid-area: project0;
-  
 }
 
 #project1{
@@ -163,7 +164,63 @@ $orange: #F6A829;
 #graph-labels {
   grid-area: graph-labels;
 }
+
+#contact-title {
+  grid-area: contact-title;
+}
+
+#contact-form {
+  grid-area: contact-form;
+  padding-top: 1.5em;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+  "name"
+  "email"
+  "message"
+  "subject"
+  "gotcha"
+  "submit"
+  "send-message"
+}
+
+#gotcha {
+  display: none;
+  grid-area: gotcha;
+}
+
+#subject {
+  display: none;
+  grid-area: subject;
+}
+
+#name {
+  grid-area: name;
+  
+;}
+
+#email {
+  grid-area: email;
+  
+} 
+
+#message {
+  grid-area: message;
+  
+}
+
+#submit {
+  grid-area: submit;
+}
+
+#send-message {
+  grid-area: send-message;
+  width: 65%;
+  margin-top: 1em;
+}
 //---Other Styling ---//
+
 
 .card-header {
   color: $darkGray;
@@ -176,6 +233,10 @@ $orange: #F6A829;
 .contain {
   padding: 2em;
 }
+
+.hidden-label {
+  display: none;
+} 
 
 #bio-pic {
   margin-bottom: 0.5em;
@@ -233,6 +294,8 @@ $orange: #F6A829;
   padding-top: 2em;
 }
 
+
+//background colors//
 .orange {
   background-color: $orange;
 }
