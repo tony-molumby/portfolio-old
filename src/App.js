@@ -43,14 +43,14 @@ class App extends Component {
       <div className="App">
         <Header id="header" windowWidth={this.state.windowWidth} />
         <Title id="title" className="separator" />
-        <Subtitle id="subtitle"/>
+        <Subtitle id="subtitle" />
         <Banner id="banner" windowWidth={this.state.windowWidth} className="separator" />
         <ProjectTitle id="project-title" className="separator" />
-        <Projects id="projects"/>
+        <Projects id="projects" />
         <Bio id="bio" className="separator" />
         <Skills id="skills" className="separator" />
         <Contact id="contact" className="" />
-        <Social />
+        <Social id="social" className="separator" />
         <Footer />
       </div>
     );

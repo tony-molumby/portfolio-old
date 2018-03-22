@@ -49,12 +49,11 @@ class ContactForm extends Component {
     
     sendForm = () => {
         let xhr = new XMLHttpRequest();
-        let url = 'https://formspree.io/tony.molumby@gmail.com';
+        const url = 'https://formspree.io/tony.molumby@gmail.com';
         
         xhr.open('POST', url, true);
         xhr.onload = () => {
             if(xhr.status === 200){
-                console.log('success!!');
                     this.setState({
                         name: "",
                         email: "",

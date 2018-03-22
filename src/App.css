@@ -170,6 +170,9 @@ body {
 .hidden {
   visibility: hidden; }
 
+.social {
+  color: #F6A829; }
+
 .line {
   stroke: #D7D7D7;
   stroke-width: 2px; }
