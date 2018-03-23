@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Visibility} from 'semantic-ui-react';
 
 //Custom Components//
 import Header from './components/header';
@@ -19,9 +20,25 @@ class App extends Component {
     super(props);
 
     this.state = {
-        windowWidth: window.innerWidth
+        // windowWidth: window.innerWidth,
+        calculations: {
+          direction: 'none',
+          height: 0,
+          width: window.innerWidth,
+          topPassed: false,
+          bottomPassed: false,
+          pixelsPassed: 0,
+          percentagePassed: 0,
+          topVisible: false,
+          bottomVisible: false,
+          fits: false,
+          passing: false,
+          onScreen: false,
+          offScreen: false,
+        }
     };
   }
+    handleUpdate = (e, { calculations }) => this.setState({ calculations })
 
     handleResize = (e) => {
       this.setState({
@@ -38,20 +55,24 @@ class App extends Component {
     }
 
   render() {
+    let {calculations} = this.state;
 
     return (
       <div className="App">
-        <Header id="header" windowWidth={this.state.windowWidth} />
+        <Header id="header" windowWidth={calculations.width} />
+        <h4>{calculations.width}</h4>
         <Title id="title" className="separator" />
         <Subtitle id="subtitle" />
-        <Banner id="banner" windowWidth={this.state.windowWidth} className="separator" />
+        <Banner id="banner" windowWidth={calculations.width} className="separator" />
         <ProjectTitle id="project-title" className="separator" />
         <Projects id="projects" />
         <Bio id="bio" className="separator" />
         <Skills id="skills" className="separator" />
         <Contact id="contact" className="" />
         <Social id="social" className="separator" />
-        <Footer />
+        <Visibility onUpdate={this.handleUpdate} className="App" fireOnMount>
+          <Footer id="footer" className="separator" />
+        </Visibility>
       </div>
     );
   }

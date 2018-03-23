@@ -6,6 +6,7 @@ $lightGray: #D7D7D7;
 $darkGray: #AEAEAE;
 $veryDarkGray: #5E5E5E;
 $orange: #F6A829;
+$black: #000;
 
 //-----Animations------//
 
@@ -14,6 +15,7 @@ $orange: #F6A829;
 
 .App {
   text-align: center;
+  width: 100%;
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(12, auto);
@@ -114,6 +116,14 @@ $orange: #F6A829;
 
 #footer {
   grid-area: footer;
+  width: 100%;
+  background-color: $black;
+  height: auto;
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-areas:
+  "copyright go-up"
 }
 
 //---Sub grid items---//
@@ -219,6 +229,16 @@ $orange: #F6A829;
   width: 65%;
   margin-top: 1em;
 }
+
+#copyright {
+  grid-area: copyright;
+  justify-self: start;
+}
+
+#go-up{
+  grid-area: go-up;
+  justify-self: end;
+}
 //---Other Styling ---//
 
 
@@ -298,6 +318,10 @@ $orange: #F6A829;
   padding-top: 2em;
 }
 
+.visibility{
+  width: 100%;
+  height:1px;
+}
 
 //background colors//
 .orange {

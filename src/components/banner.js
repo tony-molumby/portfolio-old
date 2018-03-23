@@ -5,7 +5,7 @@ class Banner extends Component {
 
     createRow = (x, y, dWidth, dHeight, fill) => {
         let {windowWidth} = this.props;
-        let numDiamonds = Math.ceil((windowWidth - x) / dWidth);
+        let numDiamonds = Math.ceil((windowWidth - x) / dWidth) + 1;
         let display = [];
         let zeroStart = false;
         if(x === 0) zeroStart = true;
