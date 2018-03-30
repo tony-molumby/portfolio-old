@@ -1,13 +1,28 @@
 import React, {Component} from 'react';
+import {Icon, List} from 'semantic-ui-react';
 
 class Subtitle extends Component{
     render(){
         return(
-            <div>
-                <h3>Full-Stack Dev</h3>
-                <h3>Product Manager</h3>
-                <h3>Nurse</h3>
-            </div>
+            <List horizontal>
+                <List.Item>
+                    <List.Content>
+                        <List.Header>Senior Leader in Product Management,</List.Header>
+                    </List.Content>
+                </List.Item>
+                <List.Item>
+                    {/* <Icon name="circle" className="bullets" /> */}
+                    <List.Content>
+                        <List.Header>Full-Stack JS Developer,</List.Header>
+                    </List.Content>
+                </List.Item> 
+                <List.Item>
+                    {/* <Icon name="circle" className="bullets" /> */}
+                    <List.Content>
+                        <List.Header>Health Care Professional</List.Header>
+                    </List.Content>
+                </List.Item>
+            </List>
         )
     }
 }

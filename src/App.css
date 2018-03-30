@@ -1,5 +1,15 @@
 body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  background-color: #5E5E5E; }
+
+h1 {
+  font-size: 11vw; }
+
+h2 {
+  font-size: 7vw; }
+
+.header {
+  font-size: 3vw; }
 
 .App {
   text-align: center;
@@ -7,17 +17,22 @@ body {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(12, auto);
-  grid-template-areas: "header" "title" "subtitle" "banner" "project-title" "projects" "bio" "skills-title" "skills-graph" "contact" "social" "footer"; }
+  grid-template-areas: "header" "title" "subtitle" "banner" "project-title" "projects" "bio" "skills-title" "skills-graph" "contact" "social" "footer"; }
 
 #header {
   max-height: 8em;
-  grid-area: header; }
+  grid-area: header;
+  width: 100%;
+  background-color: #FFF; }
 
 #title {
-  grid-area: title; }
+  grid-area: title;
+  background-color: #FFF;
+  width: 100%; }
 
 #subtitle {
-  grid-area: subtitle; }
+  grid-area: subtitle;
+  background-color: #FFF; }
 
 #banner {
   grid-area: banner;
@@ -31,7 +46,7 @@ body {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "project0" "project1" "project2" "project3"; }
+  grid-template-areas: "project0" "project1" "project2" "project3"; }
 
 #bio {
   grid-area: bio;
@@ -39,14 +54,14 @@ body {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "bio-pic" "bio-title" "bio-text"; }
+  grid-template-areas: "bio-pic" "bio-title" "bio-text"; }
 
 #skills {
   grid-area: skills;
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "skills-title" "skills-text" "skills-graph"; }
+  grid-template-areas: "skills-title" "skills-text" "skills-graph"; }
 
 #skills-title {
   grid-area: skills-title; }
@@ -60,7 +75,7 @@ body {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "contact-title" "contact-form"; }
+  grid-template-areas: "contact-title" "contact-form"; }
 
 #social {
   grid-area: social; }
@@ -94,16 +109,19 @@ body {
   grid-area: bio-pic; }
 
 #bio-title {
-  grid-area: bio-title; }
+  grid-area: bio-title;
+  color: #5E5E5E; }
 
 #bio-text {
   grid-area: bio-text; }
 
 #skills-title {
-  grid-area: skills-title; }
+  grid-area: skills-title;
+  color: #FFF; }
 
 #skills-text {
-  grid-area: skills-text; }
+  grid-area: skills-text;
+  color: #FFF; }
 
 #skills-graph {
   grid-area: skills-graph; }
@@ -120,7 +138,7 @@ body {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(6, auto);
-  grid-template-areas: "name" "email" "message" "subject" "gotcha" "submit" "send-message"; }
+  grid-template-areas: "name" "email" "message" "subject" "gotcha" "submit" "send-message"; }
 
 #gotcha {
   display: none;
@@ -178,7 +196,6 @@ body {
   align-self: center; }
 
 .hr-inverted {
-  border-color: #AEAEAE;
   background-color: #AEAEAE;
   height: 0.5em;
   align-self: center; }
@@ -209,8 +226,7 @@ body {
   cursor: pointer; }
 
 .separator {
-  margin-top: 1em;
-  padding-top: 2em; }
+  padding-top: 3em; }
 
 .visibility {
   width: 100%;
@@ -224,3 +240,23 @@ body {
 
 .light-gray {
   background-color: #D7D7D7; }
+
+@media screen and (min-width: 768px) {
+  #projects {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "project0 project1" "project2 project3"; }
+  h1 {
+    font-size: 8vw; }
+  h2 {
+    font-size: 6.5vw; }
+  .header {
+    font-size: 2.5vw; } }
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5.5vw; }
+  h2 {
+    font-size: 3vw; }
+  .header {
+    font-size: 1.75vw; } }

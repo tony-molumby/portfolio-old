@@ -72,7 +72,7 @@ class Projects extends Component {
         let {projects} = this.state;
         let cards = projects.map(this.createDisplay);
         return(
-            <div>
+            <div id={this.props.id}>
                 {cards}
             </div>
         )

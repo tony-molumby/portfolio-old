@@ -68,6 +68,7 @@ class SkillsGraph extends Component {
                     y={y}
                     key={"label-" + i}
                     transform={"rotate(270," + x + "," + y + ")"}
+                    fill="#FFF"
                 >
                 {item}
                 </text>

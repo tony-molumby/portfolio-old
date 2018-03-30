@@ -1,12 +1,29 @@
-body {
-  font-family: 'Raleway', sans-serif;
-}
+
 //------colors --------//
 $lightGray: #D7D7D7;
 $darkGray: #AEAEAE;
 $veryDarkGray: #5E5E5E;
 $orange: #F6A829;
 $black: #000;
+//----universal styling--//
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $veryDarkGray;
+}
+
+h1
+{
+  font-size: 11vw;
+}
+
+h2 {
+  font-size: 7vw;
+}
+
+.header {
+  font-size: 3vw;
+}
 
 //-----Animations------//
 
@@ -37,14 +54,19 @@ $black: #000;
 #header {
   max-height: 8em;
   grid-area: header;
+  width: 100%;
+  background-color: #FFF;
 }
 
 #title {
   grid-area: title;
+  background-color: #FFF;
+  width: 100%;
 }
 
 #subtitle {
   grid-area: subtitle;
+  background-color: #FFF;
 }
 
 #banner {
@@ -153,6 +175,7 @@ $black: #000;
 
 #bio-title {
   grid-area: bio-title;
+  color: $veryDarkGray;
 }
 
 #bio-text {
@@ -161,10 +184,12 @@ $black: #000;
 
 #skills-title {
   grid-area: skills-title;
+  color: #FFF;
 }
 
 #skills-text {
   grid-area: skills-text;
+  color: #FFF;
 }
 
 #skills-graph {
@@ -271,7 +296,6 @@ $black: #000;
 }
 
 .hr-inverted {
-  border-color: $darkGray;
   background-color: $darkGray;
   height: 0.5em;
   align-self: center;
@@ -314,8 +338,7 @@ $black: #000;
 }
 
 .separator{
-  margin-top: 1em;
-  padding-top: 2em;
+  padding-top: 3em;
 }
 
 .visibility{
@@ -341,4 +364,42 @@ $black: #000;
 
 @media screen and (min-width: 768px){
 
+  #projects {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      "project0 project1"
+      "project2 project3"
+  }
+
+  h1
+  {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6.5vw;
+  }
+
+  .header {
+    font-size: 2.5vw;
+  }
+  //bio should have title and pic to the left of bio
+  //skills graph should have a max width
+  //contact name and email should be to the left of comment
+}
+
+@media screen and (min-width: 1024px){
+  h1
+  {
+    font-size: 5.5vw;
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+
+  .header {
+    font-size: 1.75vw;
+  }
 }

@@ -14,9 +14,9 @@ class Bio extends Component {
                 </div>
                 <h3 id="bio-text">
                     I am passionate about creating applications which help others.  
-                    I have been working in healthcare and tech for the last 10 years, 
+                    I have been working in health care and tech for the last 10 years, 
                     but I am also interested in consumer applications.  I have expertise in
-                    product / project management, web development and patient care.  Check out
+                    product management / strategy, project management, web development, and patient care.  Check out
                     the links to my CV, github, and linkedin below.
                 </h3>
                 
