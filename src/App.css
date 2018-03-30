@@ -32,20 +32,24 @@ h2 {
 
 #subtitle {
   grid-area: subtitle;
-  background-color: #FFF; }
+  background-color: #FFF;
+  padding-bottom: 3em;
+  width: 100%; }
 
 #banner {
   grid-area: banner;
+  margin-top: -1px;
   width: 100%; }
 
 #project-title {
-  grid-area: project-title; }
+  grid-area: project-title;
+  color: #FFF; }
 
 #projects {
   grid-area: projects;
   display: grid;
   justify-items: center;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas: "project0" "project1" "project2" "project3"; }
 
 #bio {
@@ -173,6 +177,9 @@ h2 {
   grid-area: go-up;
   justify-self: end; }
 
+.auto-width {
+  display: inline-block; }
+
 .card-header {
   color: #AEAEAE; }
 
@@ -241,6 +248,10 @@ h2 {
 .light-gray {
   background-color: #D7D7D7; }
 
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 8vw; } }
+
 @media screen and (min-width: 768px) {
   #projects {
     grid-template-rows: repeat(2, auto);
@@ -253,10 +264,24 @@ h2 {
   .header {
     font-size: 2.5vw; } }
 
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 5.5vw; } }
+
 @media screen and (min-width: 1024px) {
+  #projects {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "project0 project1 project2" "project3"; }
   h1 {
     font-size: 5.5vw; }
   h2 {
     font-size: 3vw; }
   .header {
     font-size: 1.75vw; } }
+
+@media screen and (min-width: 1320px) {
+  #projects {
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: "project0 project1 project2 project3"; } }

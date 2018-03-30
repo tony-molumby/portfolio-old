@@ -4,7 +4,8 @@ import {Icon, List} from 'semantic-ui-react';
 class Subtitle extends Component{
     render(){
         return(
-            <List horizontal>
+            <div id={this.props.id}>
+            <List horizontal >
                 <List.Item>
                     <List.Content>
                         <List.Header>Senior Leader in Product Management,</List.Header>
@@ -23,6 +24,7 @@ class Subtitle extends Component{
                     </List.Content>
                 </List.Item>
             </List>
+            </div>
         )
     }
 }

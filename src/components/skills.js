@@ -5,7 +5,7 @@ class Skills extends Component {
     render(){
         return(
             <div id={this.props.className} className={"contain " + this.props.className}>
-                <div id="skills-title">
+                <div id="skills-title" className="auto-width">
                     <h2>Skills</h2>
                     <div className="hr"></div>
                 </div>

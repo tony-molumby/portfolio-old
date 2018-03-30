@@ -56,7 +56,7 @@ class App extends Component {
         <Header id="header" windowWidth={windowWidth} />
         <Title id="title" className="separator" />
         <Subtitle id="subtitle" />
-        <Banner id="banner" windowWidth={windowWidth} className="separator" />
+        <Banner id="banner" windowWidth={windowWidth} />
         <ProjectTitle id="project-title" className="separator" />
         <Projects id="projects" />
         <Bio id="bio" className="separator" />

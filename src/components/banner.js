@@ -42,6 +42,7 @@ class Banner extends Component {
         return(
             <div id={this.props.id} className={this.props.className}>
                 <svg height={height * 1.5} width="100%" >
+                    <rect width="100%" height={height} style={{fill:"#FFF"}} />
                     {row1}
                     {row2}
                 </svg>

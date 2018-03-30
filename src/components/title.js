@@ -4,8 +4,10 @@ class Title extends Component {
     render(){
         return(
             <div id={this.props.id} className={this.props.className}>
-                <h1 className="title">HI, I'M TONY</h1>
-                <div className="hr"></div>
+                <div className="auto-width">
+                    <h1>HI, I'M TONY</h1>
+                    <div className="hr"></div>
+                </div>
             </div>
         )
     }

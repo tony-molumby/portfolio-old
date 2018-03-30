@@ -67,22 +67,26 @@ h2 {
 #subtitle {
   grid-area: subtitle;
   background-color: #FFF;
+  padding-bottom: 3em;
+  width: 100%;
 }
 
 #banner {
   grid-area: banner;
+  margin-top: -1px;
   width: 100%;
 }
 
 #project-title {
   grid-area: project-title;
+  color: #FFF;
 }
 
 #projects {
    grid-area: projects;
    display: grid;
    justify-items: center;
-   grid-template-rows: repeat(4, 1fr);
+   grid-template-rows: repeat(4, auto);
    grid-template-areas:
     "project0"
     "project1"
@@ -266,6 +270,9 @@ h2 {
 }
 //---Other Styling ---//
 
+.auto-width {
+  display: inline-block;
+}
 
 .card-header {
   color: $darkGray;
@@ -361,6 +368,13 @@ h2 {
 
 
 //----Media Queries ---//
+@media screen and (min-width: 550px){
+  h1
+  {
+    font-size: 8vw;
+  }
+
+}
 
 @media screen and (min-width: 768px){
 
@@ -389,7 +403,22 @@ h2 {
   //contact name and email should be to the left of comment
 }
 
+@media screen and (min-width: 900px){
+  h1
+  {
+    font-size: 5.5vw;
+  }
+}
+
 @media screen and (min-width: 1024px){
+  #projects {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas:
+      "project0 project1 project2"
+      "project3"
+
+  }
   h1
   {
     font-size: 5.5vw;
@@ -401,5 +430,15 @@ h2 {
 
   .header {
     font-size: 1.75vw;
+  }
+}
+
+@media screen and (min-width: 1320px){
+  #projects {
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas:
+      "project0 project1 project2 project3"
+
   }
 }
