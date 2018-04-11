@@ -21,14 +21,15 @@ class App extends Component {
 
     this.state = {
         windowWidth: window.innerWidth,
+        projectsLeft: 0,
         scrollY: 0
-    };
   }
-    handleUpdate = (e, { calculations }) => this.setState({ calculations })
+}
 
     handleResize = (e) => {
       this.setState({
-          windowWidth: window.innerWidth
+          windowWidth: window.innerWidth,
+          projectsLeft: this.findLeft()
       });
     }
 
@@ -48,8 +49,14 @@ class App extends Component {
       window.removeEventListener('scroll', this.handleScroll);
     }
 
+
+    findLeft = () => {
+      let rect = document.getElementById('project0').getBoundingClientRect();
+      return rect.left;
+    }
+
   render() {
-    let {windowWidth, scrollY} = this.state;
+    let {windowWidth, scrollY, projectsLeft} = this.state;
 
     return (
       <div className="App">
@@ -59,7 +66,7 @@ class App extends Component {
         <Banner id="banner" windowWidth={windowWidth} />
         <ProjectTitle id="project-title" className="separator" />
         <Projects id="projects" />
-        <Bio id="bio" className="separator" />
+        <Bio id="bio" className="separator" projectsLeft={projectsLeft} windowWidth={windowWidth}/>
         <Skills id="skills" className="separator" />
         <Contact id="contact" className="" />
         <Social id="social" className="separator" />

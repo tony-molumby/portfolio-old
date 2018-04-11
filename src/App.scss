@@ -21,6 +21,10 @@ h2 {
   font-size: 7vw;
 }
 
+h3 {
+  font-size: 3vw;
+}
+
 .header {
   font-size: 3vw;
 }
@@ -175,9 +179,11 @@ h2 {
 
 #bio-pic {
   grid-area: bio-pic;
+  
 }
 
 #bio-title {
+  align-self: start;
   grid-area: bio-title;
   color: $veryDarkGray;
 }
@@ -198,6 +204,7 @@ h2 {
 
 #skills-graph {
  grid-area: skills-graph;
+ max-width: 600px;
 }
 
 #graph-labels {
@@ -290,10 +297,6 @@ h2 {
   display: none;
 } 
 
-#bio-pic {
-  margin-bottom: 0.5em;
-}
-
 .hr {
   border-color: $orange;
   background-color: $orange;
@@ -339,9 +342,7 @@ h2 {
 
 .project-card {
   display: inline-block;
-  
   margin: 1em;
-  cursor: pointer;
 }
 
 .separator{
@@ -374,6 +375,17 @@ h2 {
     font-size: 8vw;
   }
 
+  h2 {
+    font-size: 5vw;
+  }
+  
+  h3 {
+    font-size: 2vw;
+  }
+
+
+
+  
 }
 
 @media screen and (min-width: 768px){
@@ -386,19 +398,41 @@ h2 {
       "project2 project3"
   }
 
+  #bio {
+    justify-self: end;
+    margin-top: 2em;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:
+    "bio-pic bio-text"
+    "bio-title bio-text"
+  }
+
+  #bio-text {
+    text-align: left;
+    margin-top: 0em;
+  }
+
   h1
   {
     font-size: 8vw;
   }
 
   h2 {
-    font-size: 6.5vw;
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 2vw;
   }
 
   .header {
     font-size: 2.5vw;
   }
+
+  
   //bio should have title and pic to the left of bio
+  //increase the 
   //skills graph should have a max width
   //contact name and email should be to the left of comment
 }

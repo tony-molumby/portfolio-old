@@ -46,7 +46,7 @@ class ProjectCard extends Component {
 
         const content = (
             <div className="card-content">
-                <Header as="h2" color="grey">{this.props.name} </Header>
+                <Header as="h2" color="black">{this.props.name} </Header>
                 {githubBtn}
                 <Popup
                     trigger={
@@ -72,6 +72,7 @@ class ProjectCard extends Component {
                     size='medium'
                     src={this.props.img}
                     className="project-card"
+                    id={this.props.id}
                 />
         )
     }

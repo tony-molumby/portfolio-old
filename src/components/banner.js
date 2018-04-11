@@ -29,8 +29,6 @@ class Banner extends Component {
         return display;
     }
 
-
-
     render(){
         let width = 81;
         let height = 120;

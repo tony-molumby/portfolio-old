@@ -15,7 +15,7 @@ class Skills extends Component {
                     Below represents my current comfort level 
                     with each language / framework.
                 </h3>
-                <SkillsGraph id="skills-graph" className="" />
+                <SkillsGraph id="skills-graph" id="skills-graph" />
             </div>
         )
     }

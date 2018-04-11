@@ -84,7 +84,7 @@ class SkillsGraph extends Component {
         let rects = this.displayRects(width, 200);
         let labels = this.displayLabels(width);
         return(
-            <svg viewBox="0 0 300 300">
+            <svg viewBox="0 0 300 300" id={this.props.id}>
                 <rect width="300" height="200" className="graph-background"/>
                 {lines}
                 {rects}
