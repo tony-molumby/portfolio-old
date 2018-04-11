@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import {Visibility} from 'semantic-ui-react';
 
 //Custom Components//
-import Header from './components/header';
-import Title from './components/title';
-import Subtitle from './components/subtitle';
-import Banner from './components/banner';
-import ProjectTitle from './components/projectTitle';
-import Projects from './components/projects';
-import Bio from './components/bio';
-import Skills from './components/skills';
-import Contact from './components/contact';
-import Social from './components/social';
-import Footer from './components/footer';
+
 
 class App extends Component {
 
@@ -21,15 +10,13 @@ class App extends Component {
 
     this.state = {
         windowWidth: window.innerWidth,
-        projectsLeft: 0,
         scrollY: 0
   }
 }
 
     handleResize = (e) => {
       this.setState({
-          windowWidth: window.innerWidth,
-          projectsLeft: this.findLeft()
+          windowWidth: window.innerWidth
       });
     }
 
@@ -50,27 +37,19 @@ class App extends Component {
     }
 
 
-    findLeft = () => {
-      let rect = document.getElementById('project0').getBoundingClientRect();
-      return rect.left;
-    }
-
   render() {
-    let {windowWidth, scrollY, projectsLeft} = this.state;
+    let {windowWidth, scrollY} = this.state;
 
     return (
-      <div className="App">
-        <Header id="header" windowWidth={windowWidth} />
-        <Title id="title" className="separator" />
-        <Subtitle id="subtitle" />
-        <Banner id="banner" windowWidth={windowWidth} />
-        <ProjectTitle id="project-title" className="separator" />
-        <Projects id="projects" />
-        <Bio id="bio" className="separator" projectsLeft={projectsLeft} windowWidth={windowWidth}/>
-        <Skills id="skills" className="separator" />
-        <Contact id="contact" className="" />
-        <Social id="social" className="separator" />
-        <Footer id="footer" className="separator" />
+      <div id="app">
+        <Headshot id="headshot" />
+        <Social id="social" />
+        <Title id="title" />
+        <Bio id="bio" />
+        <Projects id="projects"/>
+        <Skills id="skills" />
+        <Contact id="contact" />
+        <Footer id="footer" />
       </div>
     );
   }

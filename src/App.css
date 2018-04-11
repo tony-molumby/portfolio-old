@@ -1,303 +1,30 @@
-body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #5E5E5E; }
-
-h1 {
-  font-size: 11vw; }
-
-h2 {
-  font-size: 7vw; }
-
-h3 {
-  font-size: 3vw; }
-
-.header {
-  font-size: 3vw; }
-
-.App {
-  text-align: center;
-  width: 100%;
+#app {
   display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(12, auto);
-  grid-template-areas: "header" "title" "subtitle" "banner" "project-title" "projects" "bio" "skills-title" "skills-graph" "contact" "social" "footer"; }
+  grid-template-rows: repeat(auto, 8);
+  grid-template-columns: auto;
+  grid-template-areas: "headshot" "social" "title" "bio" "projects" "skills" "contact" "footer"; }
 
-#header {
-  max-height: 8em;
-  grid-area: header;
-  width: 100%;
-  background-color: #FFF; }
-
-#title {
-  grid-area: title;
-  background-color: #FFF;
+#headshot {
+  grid-area: headshot;
   width: 100%; }
-
-#subtitle {
-  grid-area: subtitle;
-  background-color: #FFF;
-  padding-bottom: 3em;
-  width: 100%; }
-
-#banner {
-  grid-area: banner;
-  margin-top: -1px;
-  width: 100%; }
-
-#project-title {
-  grid-area: project-title;
-  color: #FFF; }
-
-#projects {
-  grid-area: projects;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "project0" "project1" "project2" "project3"; }
-
-#bio {
-  grid-area: bio;
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "bio-pic" "bio-title" "bio-text"; }
-
-#skills {
-  grid-area: skills;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "skills-title" "skills-text" "skills-graph"; }
-
-#skills-title {
-  grid-area: skills-title; }
-
-#skills-graph {
-  grid-area: skills-graph; }
-
-#contact {
-  grid-area: contact;
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "contact-title" "contact-form"; }
 
 #social {
   grid-area: social; }
 
+#title {
+  grid-area: title; }
+
+#bio {
+  grid-area: bio; }
+
+#projects {
+  grid-area: projects; }
+
+#skills {
+  grid-area: skills; }
+
+#contact {
+  grid-area: contact; }
+
 #footer {
-  grid-area: footer;
-  width: 100%;
-  background-color: #000;
-  height: auto;
-  padding: 2em;
-  display: grid;
-  grid-template-rows: 1;
-  grid-template-areas: "copyright go-up"; }
-
-#project0 {
-  grid-area: project0; }
-
-#project1 {
-  grid-area: project1; }
-
-#project2 {
-  grid-area: project2; }
-
-#project3 {
-  grid-area: project3; }
-
-#bio-pic-background {
-  grid-area: bio-pic-background; }
-
-#bio-pic {
-  grid-area: bio-pic; }
-
-#bio-title {
-  align-self: start;
-  grid-area: bio-title;
-  color: #5E5E5E; }
-
-#bio-text {
-  grid-area: bio-text; }
-
-#skills-title {
-  grid-area: skills-title;
-  color: #FFF; }
-
-#skills-text {
-  grid-area: skills-text;
-  color: #FFF; }
-
-#skills-graph {
-  grid-area: skills-graph;
-  max-width: 600px; }
-
-#graph-labels {
-  grid-area: graph-labels; }
-
-#contact-title {
-  grid-area: contact-title; }
-
-#contact-form {
-  grid-area: contact-form;
-  padding-top: 1.5em;
-  display: grid;
-  justify-items: center;
-  grid-template-rows: repeat(6, auto);
-  grid-template-areas: "name" "email" "message" "subject" "gotcha" "submit" "send-message"; }
-
-#gotcha {
-  display: none;
-  grid-area: gotcha; }
-
-#subject {
-  display: none;
-  grid-area: subject; }
-
-#name {
-  grid-area: name; }
-
-#email {
-  grid-area: email; }
-
-#message {
-  grid-area: message; }
-
-#submit {
-  grid-area: submit; }
-
-#send-message {
-  grid-area: send-message;
-  width: 65%;
-  margin-top: 1em; }
-
-#copyright {
-  grid-area: copyright;
-  justify-self: start; }
-
-#go-up {
-  grid-area: go-up;
-  justify-self: end; }
-
-.auto-width {
-  display: inline-block; }
-
-.card-header {
-  color: #AEAEAE; }
-
-.card-content {
-  align-items: center; }
-
-.contain {
-  padding: 2em; }
-
-.hidden-label {
-  display: none; }
-
-.hr {
-  border-color: #F6A829;
-  background-color: #F6A829;
-  height: 0.5em;
-  margin-bottom: 1em;
-  align-self: center; }
-
-.hr-inverted {
-  background-color: #AEAEAE;
-  height: 0.5em;
-  align-self: center; }
-
-.hidden {
-  visibility: hidden; }
-
-.social {
-  color: #F6A829; }
-
-.line {
-  stroke: #D7D7D7;
-  stroke-width: 2px; }
-
-.graph-bar {
-  fill: #F6A829;
-  stroke: #5E5E5E; }
-
-.graph-background {
-  fill: #AEAEAE; }
-
-.graph-labels {
-  transform: rotate(-10deg); }
-
-.project-card {
-  display: inline-block;
-  margin: 1em; }
-
-.separator {
-  padding-top: 3em; }
-
-.visibility {
-  width: 100%;
-  height: 1px; }
-
-.orange {
-  background-color: #F6A829; }
-
-.dark-gray {
-  background-color: #AEAEAE; }
-
-.light-gray {
-  background-color: #D7D7D7; }
-
-@media screen and (min-width: 550px) {
-  h1 {
-    font-size: 8vw; }
-  h2 {
-    font-size: 5vw; }
-  h3 {
-    font-size: 2vw; } }
-
-@media screen and (min-width: 768px) {
-  #projects {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
-    grid-template-areas: "project0 project1" "project2 project3"; }
-  #bio {
-    justify-self: end;
-    margin-top: 2em;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: 2fr 3fr;
-    grid-template-areas: "bio-pic bio-text" "bio-title bio-text"; }
-  #bio-text {
-    text-align: left;
-    margin-top: 0em; }
-  h1 {
-    font-size: 8vw; }
-  h2 {
-    font-size: 4vw; }
-  h3 {
-    font-size: 2vw; }
-  .header {
-    font-size: 2.5vw; } }
-
-@media screen and (min-width: 900px) {
-  h1 {
-    font-size: 5.5vw; } }
-
-@media screen and (min-width: 1024px) {
-  #projects {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(3, auto);
-    grid-template-areas: "project0 project1 project2" "project3"; }
-  h1 {
-    font-size: 5.5vw; }
-  h2 {
-    font-size: 3vw; }
-  .header {
-    font-size: 1.75vw; } }
-
-@media screen and (min-width: 1320px) {
-  #projects {
-    grid-template-rows: repeat(1, auto);
-    grid-template-columns: repeat(4, auto);
-    grid-template-areas: "project0 project1 project2 project3"; } }
+  grid-area: footer; }
