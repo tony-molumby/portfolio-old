@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import picture from '../pictures/headshot_midres.jpg';
 
-class Headshot extends component {
+class Headshot extends Component {
     
     render() {
         return (
-            <img src={picture} />
+            <img id={this.props.id} src={picture} />
         )
     }
 } 

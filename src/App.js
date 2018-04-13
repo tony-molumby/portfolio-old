@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 //Custom Components//
+import Headshot from './components/headshot';
+import Social from './components/social';
+import Title from './components/title';
+import Bio from './components/bio';
+import Projects from './components/projects';
+import Skills from './components/skills';
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 
 class App extends Component {

@@ -13,7 +13,7 @@ class SkillsGraph extends Component {
                 "NodeJS", 
                 "MongoDB"
             ],
-            letterNudge: [4, 6, 0, 2, 2, 0]
+            letterNudge: [4, 6, 1, 3, 3, 1]
                
         }
     }
@@ -26,7 +26,7 @@ class SkillsGraph extends Component {
         let lines = []
         for(let i = 0; i < 6; i++){
             lines.push(
-                <line x1={x1} y1={y1} x2={x2} y2={y2} key={"line-" + i} className="line" />
+                <line x1={x1} y1={y1} x2={x2} y2={y2} key={"line-" + i} className="graph-line" />
             )
             y1 += 35;
             y2 += 35;
@@ -57,7 +57,7 @@ class SkillsGraph extends Component {
     displayLabels = (width) => {
         let {labels, letterNudge} = this.state;
         let jsxLabels = [];
-        let x= 23;
+        let x = 23;
                 
         labels.forEach((item, i) => {
             let y = 270;
@@ -68,7 +68,6 @@ class SkillsGraph extends Component {
                     y={y}
                     key={"label-" + i}
                     transform={"rotate(270," + x + "," + y + ")"}
-                    fill="#FFF"
                 >
                 {item}
                 </text>
@@ -85,7 +84,7 @@ class SkillsGraph extends Component {
         let labels = this.displayLabels(width);
         return(
             <svg viewBox="0 0 300 300" id={this.props.id}>
-                <rect width="300" height="200" className="graph-background"/>
+                <rect width="300" height="200" id="graph-background"/>
                 {lines}
                 {rects}
                 {labels}
