@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Header, Icon, Popup} from 'semantic-ui-react';
+import {Icon, Popup} from 'semantic-ui-react';
 
 class Footer extends Component {
     
@@ -12,23 +12,19 @@ class Footer extends Component {
         }
     }
 
-        
-
     render(){
         return(
             <div id={this.props.id} className={this.props.className}>
-                <Header id="copyright" as='h4' inverted>&copy; 2018 TONY MOLUMBY </Header>
+                <h4>&copy; 2018 TONY MOLUMBY </h4>
                 <Popup
                     trigger={
                         <Icon
                         id="go-up"
-                        inverted
                             link 
                             name="chevron circle up" 
                             onClick={this.handleClick} 
                         />
                     }
-                    
                     content='Go to top'
                 />
             </div>

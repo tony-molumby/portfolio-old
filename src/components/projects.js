@@ -57,8 +57,9 @@ class Projects extends Component {
                 github={project.github}
                 label={project.label} 
                 img={project.img}
-                position={position} 
-                key={"project" + i} 
+                position={position}
+                number={i}
+                key={"project" + i}  
                 id={"project" + i} 
             />
         )

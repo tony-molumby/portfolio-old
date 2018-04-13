@@ -49,15 +49,17 @@ class App extends Component {
     let {windowWidth, scrollY} = this.state;
 
     return (
-      <div id="app">
-        <Headshot id="headshot" />
-        <Social id="social" />
-        <Title id="title" />
-        <Bio id="bio" />
-        <Projects id="projects"/>
-        <Skills id="skills" />
-        <Contact id="contact" />
-        <Footer id="footer" />
+      <div id="wrapper" >
+        <div id="app">
+          <Headshot id="headshot" />
+          <Social id="social" />
+          <Title id="title" />
+          <Bio id="bio" />
+          <Projects id="projects"/>
+          <Skills id="skills" />
+          <Contact id="contact" />
+          <Footer id="footer" />
+        </div>
       </div>
     );
   }
