@@ -47,6 +47,8 @@ class SkillsGraph extends Component {
                     height={height - item - 16}
                     key={"rect-" + i} 
                     className="graph-bar"
+                    data-aos="fade-up" 
+                    data-aos-duration="1500"
                 />
             )
             x += 26 + width;
@@ -83,12 +85,19 @@ class SkillsGraph extends Component {
         let rects = this.displayRects(width, 200);
         let labels = this.displayLabels(width);
         return(
-            <svg viewBox="0 0 300 300" id={this.props.id}>
-                <rect width="300" height="200" id="graph-background"/>
-                {lines}
-                {rects}
-                {labels}
-            </svg>      
+            <div
+                data-aos="fade-up" 
+                data-aos-duration="1500">
+                <svg 
+                    viewBox="0 0 300 300" 
+                    id={this.props.id}
+                    >
+                    <rect width="300" height="200" id="graph-background"/>
+                    {lines}
+                    {rects}
+                    {labels}
+                </svg> 
+            </div>      
         )
     }
 }

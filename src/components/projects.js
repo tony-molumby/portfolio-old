@@ -71,7 +71,8 @@ class Projects extends Component {
 
         return (
             <div id={this.props.id} className="container">
-                <h2>Recent Projects</h2>
+                <h2 data-aos="zoom-in-right"
+                    data-aos-duration="1500">Recent Projects</h2>
                 {projectDisplay}
             </div>
         )

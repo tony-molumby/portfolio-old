@@ -123,18 +123,14 @@ input {
 
 .project-card{
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 200px 200px;
   grid-template-rows: auto;
   padding: 2em 0em 2em 0em;
+
 }
 
 .project-image {
-  width: 150px;
-  
-}
-
-.project-label {
-  width:200px;
+  width:100%;
 }
 
 .project-label-container {
@@ -161,12 +157,14 @@ input {
   grid-column: 1 / 2;
   text-align: right;
   padding-right: 1em;
+ 
 }
 
 .left .project-label  {
   grid-column: 2 / 3;
   text-align: left;
   padding-left: 1em;
+ 
 }
 //---------------------
 

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import AOS from 'aos';
+
+
 
 //Custom Components//
 import Headshot from './components/headshot';
@@ -21,6 +24,9 @@ class App extends Component {
         scrollY: 0
   }
 }
+  componentWillMount(){
+    AOS.init();
+  }
 
     handleResize = (e) => {
       this.setState({

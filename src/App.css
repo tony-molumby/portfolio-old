@@ -79,15 +79,12 @@ input {
 
 .project-card {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 200px 200px;
   grid-template-rows: auto;
   padding: 2em 0em 2em 0em; }
 
 .project-image {
-  width: 150px; }
-
-.project-label {
-  width: 200px; }
+  width: 100%; }
 
 .project-label-container {
   display: inline-block; }
