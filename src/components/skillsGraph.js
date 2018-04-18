@@ -87,7 +87,7 @@ class SkillsGraph extends Component {
         return(
             <div
                 data-aos="fade-up" 
-                data-aos-duration="1500">
+                data-aos-duration={this.props.duration}>
                 <svg 
                     viewBox="0 0 300 300" 
                     id={this.props.id}

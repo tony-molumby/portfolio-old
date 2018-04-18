@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Message, Label, Form, Input, TextArea, Button} from 'semantic-ui-react';
+import {Form, Input, TextArea, Button} from 'semantic-ui-react';
 
 class ContactForm extends Component {
     constructor(props){
@@ -8,120 +8,17 @@ class ContactForm extends Component {
             name: "",
             email: "",
             message: "",
-            math: [],
             nameErr: "",
             emailErr: "",
             messageErr: "",
-            sendMessage: ""
+            sendMessage: "",
         }
-    }
-
-    componentWillMount(){
-        let nums = [];
-        let min = 0;
-        let max = 30;
-        for(let i = 0; i < 2; i ++){
-            nums.push(this.getRandomNum(min, max))
-        }
-        this.setState({
-            math: nums
-        })
-    }
-
-    //may need this to stop spam
-    getRandomNum = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     handleChange = (e, {name, value}) => {
         this.setState({
             [name]: value
         });
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-        let err = this.validate();
-        if(!err){
-            this.sendForm();
-        }
-    }
-    
-    sendForm = () => {
-        let xhr = new XMLHttpRequest();
-        const url = 'https://formspree.io/tony.molumby@gmail.com';
-        
-        xhr.open('POST', url, true);
-        xhr.onload = () => {
-            if(xhr.status === 200){
-                    this.setState({
-                        name: "",
-                        email: "",
-                        message: "",
-                        math: [],
-                        nameErr: "",
-                        emailErr: "",
-                        messageErr: "",
-                        sendMessage: <Message compact>
-                                        Message sent! I will get back to you as soon as possible.
-                                    </Message>
-                    });
-            } else if(xhr.status === 404  || xhr.status === 400){
-                this.setState({
-                    sendMessage: <Message compact>
-                                    Something went wrong on the server side.  
-                                    Try again later.
-                                </Message>
-                });
-            }
-        }
-        xhr.onerror = () => {
-            this.setState({
-                sendMessage: <Message compact>
-                                Something went wrong on the client side.  
-                                Make sure you have JS enabled.
-                            </Message>
-            })
-                                
-        }
-
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send(this.requestBuildQueryString());
-    }
-    
-    requestBuildQueryString = () => {
-        let queryString = Object.keys(this.state).map((key) => {
-            return encodeURIComponent(key) + '=' + encodeURIComponent(this.state[key]);
-        }).splice(0,3).join('&');
-        return queryString;
-    }
-    
-
-
-    validate = () => {
-        let {name, email, message} = this.state;
-        let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-        let errors = {};
-        let isError = false
-        if(name.length < 2) {
-            isError = true;
-            errors.nameErr = <Label basic color="red" pointing="below">Please enter a valid name.</Label>;
-        }
-        if(!re.test(email)){
-            isError = true;
-            errors.emailErr = <Label basic color="red" pointing="below">Please enter a valid email.</Label>;
-        }
-        if(message.length < 10){
-            isError = true;
-            errors.messageErr = <Label basic color="red" pointing="below">Please enter a longer message.</Label>;
-        }
-
-        this.setState({
-            ...this.state,
-            ...errors
-        })
-        
-        return isError;
     }
 
     render(){
@@ -136,10 +33,15 @@ class ContactForm extends Component {
             } = this.state;
         
         return(
+
             <Form 
                 id={this.props.id}
+                action="https://formspree.io/tony.molumby@gmail.com"
+                method="POST"
+                data-aos="fade-up"
+                data-aos-duration={this.props.duration}
+                className="container"
             >
-                
                 <Form.Field id="name">
                     {nameErr}
                     <Input 
@@ -191,14 +93,15 @@ class ContactForm extends Component {
                     size="large" 
                     id="submit"
                     type="submit"
-                    onClick={this.handleSubmit}
+                    // onClick={this.handleSubmit}
                     >Send
                 </Button>
-                
                 <div id="send-message">
                     {sendMessage}
                 </div>
+    
             </Form>
+            
         )
     }
 }

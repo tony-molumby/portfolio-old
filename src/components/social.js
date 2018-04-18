@@ -22,7 +22,7 @@ class Social extends Component {
                 id={this.props.id}
                 className="container" 
                 data-aos="fade-up"
-                data-aos-duration="1500"
+                data-aos-duration={this.props.duration}
             >
              <Popup
                     trigger={

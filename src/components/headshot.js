@@ -5,7 +5,7 @@ class Headshot extends Component {
     
     render() {
         return (
-            <img id={this.props.id} src={picture} />
+            <img id={this.props.id} src={picture} alt="Headshot of Tony" />
         )
     }
 } 

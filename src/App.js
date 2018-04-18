@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import AOS from 'aos';
 
-
-
 //Custom Components//
+import Banner from './components/banner';
 import Headshot from './components/headshot';
 import Social from './components/social';
+import NameHeading from './components/nameHeading';
+import Subheadings from './components/subheadings';
 import Title from './components/title';
 import Bio from './components/bio';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import Contact from './components/contact';
 import Footer from './components/footer';
-
 
 class App extends Component {
 
@@ -21,7 +21,8 @@ class App extends Component {
 
     this.state = {
         windowWidth: window.innerWidth,
-        scrollY: 0
+        scrollY: 0,
+        duration: 1200
   }
 }
   componentWillMount(){
@@ -52,19 +53,21 @@ class App extends Component {
 
 
   render() {
-    let {windowWidth, scrollY} = this.state;
+    let {windowWidth, scrollY, duration} = this.state;
 
     return (
       <div id="wrapper" >
         <div id="app">
-          <Headshot id="headshot" />
-          <Social id="social" />
-          <Title id="title" />
-          <Bio id="bio" />
-          <Projects id="projects"/>
-          <Skills id="skills" />
-          <Contact id="contact" />
-          <Footer id="footer" />
+          <Banner id="banner" duration={duration} windowWidth={windowWidth} />
+          <Headshot id="headshot" duration={duration} />
+          <Social id="social" duration={duration}/>
+          <NameHeading id="name-heading" duration={duration} />
+          <Subheadings id="subheadings" duration={duration} />
+          <Bio id="bio" duration={duration} />
+          <Projects id="projects" duration={duration}/>
+          <Skills id="skills" duration={duration} />
+          <Contact id="contact" duration={duration} />
+          <Footer id="footer" duration={duration} />
         </div>
       </div>
     );

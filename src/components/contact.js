@@ -5,17 +5,23 @@ class Contact extends Component {
     render(){
         
         return(
-            <div id={this.props.id} className={"orange contain " + this.props.className}>
-                <div id="contact-title">
+            <div 
+                id={this.props.id} 
+                >
+                <div 
+                    id="contact-title" 
+                    data-aos="fade-up"
+                    data-aos-duration={this.props.duration}
+                    className="container"
+                >
                     <h3>
                         I am currently looking for a position with strong mentorship to continue to improve my skills.
                         <br />
                         <br />
-                        Contact me and let's see if its a good fit.
+                        If this sounds like your organization, contact me and let's see if it's a good fit.
                     </h3>
-                    <div className="hr-inverted"></div>
                 </div>
-                <ContactForm id="contact-form" />
+                <ContactForm id="contact-form" duration={this.props.duration} />
             </div>
         )
     }

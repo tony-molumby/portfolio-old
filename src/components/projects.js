@@ -18,9 +18,10 @@ class Projects extends Component {
             projects: [
                 {
                     name: "Portfolio",
-                    label: "The responsive prototype for this site... very meta.",
+                    label: "The responsive prototype and repo for this site... very meta.",
                     img: portfolio,
-                    url: "https://p0gbs6.axshare.com/#c=2"
+                    url: "https://p0gbs6.axshare.com/#c=2",
+                    github: "https://github.com/tony-molumby/portfolio"
                 },
                 {
                     name: "find12steps.com",
@@ -59,6 +60,7 @@ class Projects extends Component {
                 img={project.img}
                 position={position}
                 number={i}
+                duration={this.props.duration}
                 key={"project" + i}  
                 id={"project" + i} 
             />
@@ -71,8 +73,19 @@ class Projects extends Component {
 
         return (
             <div id={this.props.id} className="container">
-                <h2 data-aos="zoom-in-right"
-                    data-aos-duration="1500">Recent Projects</h2>
+                <div 
+                    id="projects-heading"
+                    data-aos="zoom-in-right"
+                    data-aos-duration={this.props.duration}
+                    >
+                    <h2 id="projects-subheading-1">Projects
+                    </h2>
+                    <hr />
+                    <h3 id="projects-subheading-2">
+                        These items were chosen from my most recent
+                        coding projects.
+                    </h3>
+                </div>
                 {projectDisplay}
             </div>
         )
