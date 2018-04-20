@@ -6,13 +6,13 @@ class Contact extends Component {
         
         return(
             <div 
-                id={this.props.id} 
+                id={this.props.id}
                 >
                 <div 
                     id="contact-title" 
                     data-aos="fade-up"
                     data-aos-duration={this.props.duration}
-                    className="container"
+                    
                 >
                     <h3>
                         I am currently looking for a position with strong mentorship to continue to improve my skills.

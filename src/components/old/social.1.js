@@ -18,7 +18,12 @@ class Social extends Component {
 
     render(){
         return(
-            <div id={this.props.id} className={this.props.className}>
+            <div 
+                id={this.props.id}
+                className="container" 
+                data-aos="fade-up"
+                data-aos-duration={this.props.duration}
+            >
              <Popup
                     trigger={
                         <Icon

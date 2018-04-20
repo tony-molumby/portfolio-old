@@ -6,7 +6,7 @@ class Subheadings extends Component {
         return (
             <div 
                 id={this.props.id} 
-                className="container" 
+                className="container"
                 data-aos="fade-up" 
                 data-aos-duration={this.props.duration}
             >

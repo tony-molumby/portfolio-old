@@ -40,7 +40,6 @@ class ContactForm extends Component {
                 method="POST"
                 data-aos="fade-up"
                 data-aos-duration={this.props.duration}
-                className="container"
             >
                 <Form.Field id="name">
                     {nameErr}

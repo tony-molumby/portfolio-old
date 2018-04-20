@@ -3,8 +3,8 @@ import {Icon, Popup, Button} from 'semantic-ui-react';
 
 class ProjectCard extends Component {
 
-    handleClick = (e, {name}) => {
-        window.open(this.props[name], '_blank');
+    handleClick = (url, e) => {
+        window.open(url, '_blank');
     }
 
     createButtons = () => {
@@ -13,11 +13,11 @@ class ProjectCard extends Component {
             let githubBtn = (
                 <Popup
                     trigger={
-                        <Button 
+                        <Icon 
                             name="github" 
-                            onClick={this.handleClick} 
-                            icon="github square"
+                            onClick={(e) => this.handleClick(this.props.github, e)} 
                             size="big"
+                            className="project-icon"
                         />
                     }
                 content="View code on github"
@@ -29,11 +29,11 @@ class ProjectCard extends Component {
             let urlBtn = (
                 <Popup
                     trigger={
-                        <Button 
-                            name="url" 
-                            onClick={this.handleClick} 
-                            icon="external"
+                        <Icon 
+                            name="external" 
+                            onClick={(e) => this.handleClick(this.props.url, e)} 
                             size="big"
+                            className="project-icon"
                         />
                     }
                 content="View on the web"

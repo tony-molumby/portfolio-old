@@ -72,7 +72,7 @@ class Projects extends Component {
         let projectDisplay = projects.map(this.createDisplay);
 
         return (
-            <div id={this.props.id} className="container">
+            <div id={this.props.id}>
                 <div 
                     id="projects-heading"
                     data-aos="zoom-in-right"

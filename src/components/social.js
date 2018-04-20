@@ -2,19 +2,20 @@ import React, {Component} from 'react';
 import {Icon, Popup} from 'semantic-ui-react';
 
 class Social extends Component {
-    handleClick = (e, data) => {
-        let classes = e.target.className;
-        let url = "";
-        //this is a hack, need to refactor
-        if(classes.indexOf("linkedin") > -1){
-            url = "https://www.linkedin.com/in/tony-molumby/";
-        } else if(classes.indexOf("github") > -1){
-            url = "https://github.com/tony-molumby"
-        } else {
-            url = "https://drive.google.com/file/d/11NqUUacmprwmMjpyymOBWDXePqdihiyB/view?usp=sharing";
+
+    constructor(props) {
+        super(props) 
+        this.state = {
+                linkedin: "https://www.linkedin.com/in/tony-molumby/",
+                github: "https://github.com/tony-molumby",
+                resume: "https://drive.google.com/file/d/11NqUUacmprwmMjpyymOBWDXePqdihiyB/view?usp=sharing"
         }
+    }
+
+    handleClick = (url, e) => {
         window.open(url, '_blank');
     }
+
 
     render(){
         return(
@@ -31,7 +32,7 @@ class Social extends Component {
                             name="file pdf outline" 
                             size="huge" 
                             className="social"
-                            onClick={this.handleClick} 
+                            onClick={(e) => this.handleClick(this.state.resume, e)} 
                         />
                     }
                     content='Resume'
@@ -44,7 +45,7 @@ class Social extends Component {
                             name="linkedin" 
                             size="huge" 
                             className="social"
-                            onClick={this.handleClick} 
+                            onClick={(e) => this.handleClick(this.state.linkedin, e)} 
                         />
                     }
                     content='Linkedin'
@@ -58,7 +59,7 @@ class Social extends Component {
                             name="github" 
                             size="huge" 
                             className="social"
-                            onClick={this.handleClick} 
+                            onClick={(e) => this.handleClick(this.state.github, e)} 
                         />
                     }
                     content='Github'

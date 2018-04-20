@@ -30,7 +30,7 @@ class Bio extends Component {
                 </p>
                 <p > 
                     Since my time at RightCare and naviHealth I have been persuing some of my own interests; traveling and web development.
-                    As a product manager I was always curious about the technical / development side of software development.  So
+                    As a product manager I was always curious about the technical side of software development.  So
                     I made it my goal to learn web development.  In early 2017 I went on a journey through Central America, South America 
                     and Europe with my family.  While traveling I spent time each day teaching myself JavaScript web development.
                     In June 2017 I earned a front-end certificaion from freecodecamp.com and have since invested over a 1000 hours learning
@@ -40,11 +40,11 @@ class Bio extends Component {
                     Most recently I created a website which aggregates 12-step program meetings for people in the San Francisco Bay Area, 
                     find12steps.com.  I have friends and family who have benefitted greatly from these meetings and I wanted to contribute
                     to something that has had such a positive influence on so many people.  With this site, users can search over 2300 
-                    meetings from a variety of programs instead of having to browse to multiple sites to get the meeting information they need.
+                    meetings from a variety of programs instead of having to browse multiple sites to get the meeting information they need.
                 </p>
                 <p>
                     Currently I am looking for a team which values positive company culture, and is invested in the success of 
-                    their collegues.  If that sounds like your organizaton, please contact me using the form below.
+                    their colleagues.  If that sounds like your organizaton, please contact me using the form below.
                 </p>    
             </div>
         )
