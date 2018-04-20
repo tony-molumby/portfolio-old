@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Icon, Popup, Button} from 'semantic-ui-react';
+import {Icon, Popup} from 'semantic-ui-react';
 
 class ProjectCard extends Component {
 
@@ -21,6 +21,7 @@ class ProjectCard extends Component {
                         />
                     }
                 content="View code on github"
+                key={this.props.name + "-github-btn"}
             />
             )
             buttons.push(githubBtn);
@@ -37,6 +38,7 @@ class ProjectCard extends Component {
                         />
                     }
                 content="View on the web"
+                key={this.props.name + "-url-btn"}
             />
             )
             buttons.push(urlBtn);

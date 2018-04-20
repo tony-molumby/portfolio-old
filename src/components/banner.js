@@ -7,7 +7,7 @@ class Banner extends Component {
         let content;
 
         if(this.props.windowWidth > 800){
-            content = <img src={ggBridge} id="banner-img"/>
+            content = <img src={ggBridge} id="banner-img" alt="gg bridge at dusk"/>
         }
         return (
             <div id={this.props.id}>

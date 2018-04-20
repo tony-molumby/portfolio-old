@@ -33,74 +33,74 @@ class ContactForm extends Component {
             } = this.state;
         
         return(
-
-            <Form 
-                id={this.props.id}
-                action="https://formspree.io/tony.molumby@gmail.com"
-                method="POST"
-                data-aos="fade-up"
-                data-aos-duration={this.props.duration}
-            >
-                <Form.Field id="name">
-                    {nameErr}
-                    <Input 
-                        placeholder="name" 
-                        className="inputs" 
-                        icon="id badge"
-                        iconPosition="left"
-                        name="name"
-                        value={name}
-                        onChange={this.handleChange}
-                    />
-                </Form.Field>
-                <Form.Field id="email">
-                    {emailErr}
-                    <Input 
-                        placeholder="email" 
-                        className="inputs" 
-                        icon="mail outline"
-                        iconPosition="left"
-                        name="email"
-                        value={email}
-                        onChange={this.handleChange}
-                    />
-                </Form.Field>
-                <Form.Field id="message">
-                    {messageErr}
-                    <TextArea 
-                        placeholder="type in a message" 
-                        className="message"
-                        name="message"
-                        value={message} 
-                        onChange={this.handleChange}
-                    />
-                </Form.Field>
-                <Form.Field id="subject">
-                    <Input
-                        type="hidden"
-                        className="message"
-                        name="_subject"
-                        value="New Message from your portfolio site!"
-                    />
-                </Form.Field>
-                <Form.Field id="gotcha">
-                    <Input
-                        name="_gotcha"
-                    />
-                </Form.Field>
-                <Button 
-                    size="large" 
-                    id="submit"
-                    type="submit"
-                    // onClick={this.handleSubmit}
-                    >Send
-                </Button>
-                <div id="send-message">
-                    {sendMessage}
-                </div>
-    
-            </Form>
-            
+            <div id={this.props.id}>
+                <Form 
+                    action="https://formspree.io/tony.molumby@gmail.com"
+                    method="POST"
+                    data-aos="fade-up"
+                    data-aos-duration={this.props.duration}
+                >
+                    <Form.Field id="name">
+                        {nameErr}
+                        <Input 
+                            placeholder="name"
+                            type="text" 
+                            className="inputs" 
+                            icon="id badge"
+                            iconPosition="left"
+                            name="name"
+                            value={name}
+                            onChange={this.handleChange}
+                        />
+                    </Form.Field>
+                    <Form.Field id="email">
+                        {emailErr}
+                        <Input 
+                            placeholder="email" 
+                            className="inputs" 
+                            icon="mail outline"
+                            iconPosition="left"
+                            name="email"
+                            value={email}
+                            onChange={this.handleChange}
+                        />
+                    </Form.Field>
+                    <Form.Field id="message">
+                        {messageErr}
+                        <TextArea 
+                            placeholder="type in a message" 
+                            className="message"
+                            name="message"
+                            value={message} 
+                            onChange={this.handleChange}
+                        />
+                    </Form.Field>
+                    <Form.Field id="subject">
+                        <Input
+                            type="hidden"
+                            className="message"
+                            name="_subject"
+                            value="New Message from your portfolio site!"
+                        />
+                    </Form.Field>
+                    <Form.Field id="gotcha">
+                        <Input
+                            name="_gotcha"
+                        />
+                    </Form.Field>
+                    <Button 
+                        size="large" 
+                        id="submit"
+                        type="submit"
+                        // onClick={this.handleSubmit}
+                        >Send
+                    </Button>
+                    <div id="send-message">
+                        {sendMessage}
+                    </div>
+        
+                </Form>
+            </div>
         )
     }
 }

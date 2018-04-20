@@ -7,7 +7,6 @@ import Headshot from './components/headshot';
 import Social from './components/social';
 import NameHeading from './components/nameHeading';
 import Subheadings from './components/subheadings';
-import Title from './components/title';
 import Bio from './components/bio';
 import Projects from './components/projects';
 import Skills from './components/skills';
@@ -21,7 +20,6 @@ class App extends Component {
 
     this.state = {
         windowWidth: window.innerWidth,
-        scrollY: 0,
         duration: 1200
   }
 }
@@ -35,28 +33,19 @@ class App extends Component {
       });
     }
 
-    handleScroll = (e) => {
-      this.setState({
-        scrollY: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      });
-    }
-
     componentDidMount() {
       window.addEventListener('resize', this.handleResize);
-      window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
       window.removeEventListener('resize', this.handleResize);
-      window.removeEventListener('scroll', this.handleScroll);
     }
 
 
   render() {
-    let {windowWidth, scrollY, duration} = this.state;
+    let {windowWidth, duration} = this.state;
 
     return (
-      <div id="wrapper" >
         <div id="app">
           <Banner id="banner" duration={duration} windowWidth={windowWidth} />
           <Headshot id="headshot" duration={duration} />
@@ -69,7 +58,6 @@ class App extends Component {
           <Contact id="contact" duration={duration} />
           <Footer id="footer" duration={duration} />
         </div>
-      </div>
     );
   }
 }

@@ -42,6 +42,7 @@ text {
 
 #app {
   display: grid;
+  width: 100%;
   grid-area: app;
   grid-template-rows: repeat(9, auto);
   grid-template-columns: auto;
@@ -282,8 +283,13 @@ text {
   margin-top: 1em;
 }
 
+#contact-title {
+  padding: 2em 1em 0em 1em;
+}
+
 #contact-form {
   margin-top: 1em;
+  padding: 1em;
 }
 
 //--------------------
@@ -291,7 +297,6 @@ text {
 //footer-------------
 #footer {
   grid-area: footer;
-  width: 100%;
   display: grid;
   background-color: $gray;
   padding: 1em;
@@ -457,9 +462,8 @@ text {
   }
 
   #contact {
-    padding: 1em 25vw 1em 25vw;
+    padding: 1em 15vw 1em 15vw;
   }
-
 
 }
 
