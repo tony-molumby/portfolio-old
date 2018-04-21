@@ -26,14 +26,14 @@ class Bio extends Component {
                     from an acute to post-acute setting.  Our proprietary algorithm screened millions of patients, and is still
                     being used today.  I was the 5th employee, and seeing a need for a dedicated product management role,
                     I transitioned from client services to product management and strategy.  In December of 2015 RightCare
-                    was aquired by naviHealth.
+                    was acquired by naviHealth.
                 </p>
                 <p > 
-                    Since my time at RightCare and naviHealth I have been persuing some of my own interests; traveling and web development.
+                    Since my time at RightCare and naviHealth I have been pursuing some of my own interests; traveling and web development.
                     As a product manager I was always curious about the technical side of software development.  So
                     I made it my goal to learn web development.  In early 2017 I went on a journey through Central America, South America 
                     and Europe with my family.  While traveling I spent time each day teaching myself JavaScript web development.
-                    In June 2017 I earned a front-end certificaion from freecodecamp.com and have since invested over a 1000 hours learning
+                    In June 2017 I earned a front-end certification from freecodecamp.com and have since invested over 1000 hours learning
                     other JS related databases and frameworks. 
                 </p>
                 <p >
@@ -44,7 +44,7 @@ class Bio extends Component {
                 </p>
                 <p>
                     Currently I am looking for a team which values positive company culture, and is invested in the success of 
-                    their colleagues.  If that sounds like your organizaton, please contact me using the form below.
+                    their colleagues.  If that sounds like your organization, please contact me using the form below.
                 </p>    
             </div>
         )
