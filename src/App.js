@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AOS from 'aos';
 
 //Custom Components//
 import Banner from './components/banner';
@@ -23,9 +22,6 @@ class App extends Component {
         duration: 1200
   }
 }
-  componentWillMount(){
-    AOS.init();
-  }
 
     handleResize = (e) => {
       this.setState({
