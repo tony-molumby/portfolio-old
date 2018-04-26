@@ -11,6 +11,9 @@ import Projects from './components/projects';
 import Skills from './components/skills';
 import Contact from './components/contact';
 import Footer from './components/footer';
+import AOS from 'aos';
+
+AOS.init();
 
 class App extends Component {
 
@@ -29,12 +32,18 @@ class App extends Component {
       });
     }
 
+    componentWillMount(){
+  
+    }
+
     componentDidMount() {
       window.addEventListener('resize', this.handleResize);
+      window.addEventListener('load', AOS.refresh);
     }
 
     componentWillUnmount() {
       window.removeEventListener('resize', this.handleResize);
+      window.removeEventListener('load', AOS.refresh);
     }
 
 
