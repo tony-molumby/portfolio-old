@@ -58,8 +58,8 @@ class App extends Component {
           <NameHeading id="name-heading" duration={duration} />
           <Subheadings id="subheadings" duration={duration} />
           <Bio id="bio" duration={duration} />
-          <Projects id="projects" duration={duration}/>
-          <Skills id="skills" duration={duration} />
+          {/* <Projects id="projects" duration={duration}/>
+          <Skills id="skills" duration={duration} /> */}
           <Contact id="contact" duration={duration} />
           <Footer id="footer" duration={duration} />
         </div>
